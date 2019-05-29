@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">家庭智能空间人机交互软件</string>
+    <string name="app_versionName">1.0</string>
+    <string name="menu_first">首页</string>
+    <string name="menu_second">服务反馈</string>
+    <string name="menu_third">服务添加</string>
+    <string name="menu_fourth">定时服务</string>
+</resources>

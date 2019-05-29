@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TimePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tp_add"
+        android:timePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:layout_gravity="center_horizontal">
+    </TimePicker>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="时间选择:"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tv_time_select"
+                    android:layout_width="100dp"
+                    android:lineSpacingExtra="6dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tv_time"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="17sp"
+                    android:background="@drawable/txt_rectborder"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/tv_service"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="服务选择:"
+                    android:textColor="@color/black"
+                    android:textSize="17sp" />
+
+                <Spinner
+                    android:id="@+id/sp_service"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/tv_service"
+                    android:gravity="center_vertical"
+                    android:spinnerMode="dialog"
+                    android:textSize="17sp"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_add_service"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="点击添加服务"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_clear"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:text="清空"
+                android:textColor="@color/black"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务项目列表"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+        <!--android:saveEnabled="true",如果未作设置，当View被冻结时将不会保存其状态-->
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_service_list"
+            android:saveEnabled="true">
+        </ListView>
+    </LinearLayout>
+</LinearLayout>
